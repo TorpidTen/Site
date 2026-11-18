@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my site</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Frame 1 */
+.frame {
+    position: relative;
+    width: 1440px;
+    height: 785px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+/* Top Bar */
+.topbar {
+    position: absolute;
+    width: 1440px;
+    height: 47px;
+    top: 0;
+    left: 0;
+    background: #565656;
+}
+
+.title {
+    position: absolute;
+    left: 11px;
+    top: 11px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    width: 96px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.products {
+    left: 514px;
+    top: 50px;
+    background: #5D5D5D;
+    color: white;
+}
+
+.games {
+    left: 676px;
+    top: 50px;
+    background: #D9D9D9;
+    color: black;
+}
+
+.about {
+    left: 829px;
+    top: 50px;
+    background: #D9D9D9;
+    color: black;
+}
+
+/* Social Button */
+.socials {
+    position: absolute;
+    width: 104px;
+    height: 27px;
+    left: 1305px;
+    top: 10px;
+    background: #D9D9D9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.socials:hover {
+    opacity: 0.85;
+}
+
+/* Product Cards */
+.card {
+    position: absolute;
+    width: 146px;
+    height: 170px;
+    background: #D9D9D9;
+    border-radius: 10px;
+}
+
+.card1 { left: 103px; top: 126px; }
+.card2 { left: 321px; top: 126px; }
+.card3 { left: 539px; top: 126px; }
+.card4 { left: 757px; top: 126px; }
+.card5 { left: 975px; top: 126px; }
+.card6 { left: 1193px; top: 126px; }
+
+.get-btn {
+    position: absolute;
+    width: 82px;
+    height: 26px;
+    background: #00D238;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.get1 { left: 135px; top: 313px; }
+.get2 { left: 353px; top: 313px; }
+.get3 { left: 571px; top: 313px; }
+.get4 { left: 789px; top: 313px; }
+.get5 { left: 1007px; top: 313px; }
+.get6 { left: 1225px; top: 313px; }
+
+.get-btn:hover {
+    opacity: 0.85;
+}
+
+/* Frame 2 */
+.frame2 {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+
+    width: 172px;
+    height: 246px;
+
+    background: #ffffff;
+    border: 0.1px solid #000000;
+    border-radius: 5px 0px 5px 5px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateX(10px);
+    transition: 0.3s ease;
+
+    z-index: 9999;
+}
+
+.frame2.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+
+#overlayBg {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+#overlayBg.active {
+    opacity: 0;
+    pointer-events: auto;
+}
+
+/* Rectangle 3 */
+.discordbtn {
+    position: absolute;
+    width: 92px;
+    height: 35x1px;
+    left: 34px;
+    top: 27px; 
+    background: #738ADB;
+    border-radius: 3px;
+}
+
+
+/* Rectangle 4 */
+.ytbtn {
+    position: absolute;
+    width: 92px;
+    height: 20px;
+    left: 34px;
+    top: 82px;
+    background: #FF0000;
+    border-radius: 3px;
+}
+
+/* Rectangle 5 */
+.instabtn {
+    position: absolute;
+    width: 92px;
+    height: 20px;
+    left: 34px;
+    top: 137px;
+    background: #FFCC00;
+    border-radius: 3px;
+}
+
+/* Rectangle 6 */
+.xbtn {
+    position: absolute;
+    width: 92px;
+    height: 20px;
+    left: 34px;
+    top: 192px;
+
+    background: #2A2A2A;
+    border-radius: 3px;
+}
+
+.close {
+position: absolute;
+width: 17px;
+height: 17px;
+left: 149px;
+top: 10px;
+
+background: #FF0B0B;
+border-radius: 5px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+    <div class="topbar"></div>
+
+    <div class="title">This Is A Test Website</div>
+
+    <button class="nav-btn products">Products</button>
+    <button class="nav-btn games">Games</button>
+    <button class="nav-btn about">About</button>
+
+    <button class="socials">My Socials</button>
+
+    <div class="card card1"></div>
+    <button class="get-btn get1">Get</button>
+
+    <div class="card card2"></div>
+    <button class="get-btn get2">Get</button>
+
+    <div class="card card3"></div>
+    <button class="get-btn get3">Get</button>
+
+    <div class="card card4"></div>
+    <button class="get-btn get4">Get</button>
+
+    <div class="card card5"></div>
+    <button class="get-btn get5">Get</button>
+
+    <div class="card card6"></div>
+    <button class="get-btn get6">Get</button>
+</div>
+
+<div id="overlayBg"></div>
+<div id="socialOverlay" class="frame2">
+    <button class="close">X</button>
+    <button class="discordbtn">My Discord Server</button>
+    <button class="ytbtn">My Youtube</button>
+    <button class="instabtn">My Instagram</button>
+    <button class="xbtn">My Twitter</button>
+</div>
+<script src="events.js"></script>
+</body>
+</html>
